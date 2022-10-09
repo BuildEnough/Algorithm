@@ -1,13 +1,17 @@
+from re import L
+
+
 A, B = map(int, input().split())
 C = int(input())
 
-if B + C >= 60:
+A += C // 60
+B += C % 60
+
+if B >= 60:
     A += 1
-    B += 60 - C
-else:
-    B = B + C
+    B -= 60
 
 if A >= 24:
-    A = 0
+    A -=24
 
 print(A, B)
