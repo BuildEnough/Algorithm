@@ -1,8 +1,15 @@
 dice = list(map(int, input().split()))
 
-count_ = set(dice)
+a = 0
 
-if len(count_) == 1:
-    print(10000 * dice[0] * 1000)
-elif len(count_) == 2:
-    print(1000 * )
+if len(set(dice)) == 1:
+    print((10**4) + (dice[0] * 1000))
+
+elif len(set(dice)) == 3:
+    print(max(dice) * 100)
+
+else:
+    for i in range(3):
+        if dice.count(dice[i]) == 2:
+            a = dice[dice.index(dice[i])]
+    print(1000 + (a * 100))
