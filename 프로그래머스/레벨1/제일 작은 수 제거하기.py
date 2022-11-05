@@ -1,7 +1,9 @@
 def solution(arr):
-    arr.sort(reverse=True)
-    arr.pop()
-    if len(arr) == 0:
-        return [-1]
+
+    if len(arr) == 1:
+        arr = []
+        arr.append(-1)
     else:
-        return arr
+        arr.remove(min(arr))
+
+    return arr
