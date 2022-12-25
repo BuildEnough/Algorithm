@@ -8,4 +8,4 @@ for i in range(num):
         a, b = b, a   
     gcd = b
     lcm = A * B // b
-    print(lcm)ㄴ
+    print(lcm)
