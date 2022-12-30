@@ -1,12 +1,15 @@
 import java.util.Scanner;
-public class AminusB_1001 {
+public class _10869_FourArithmeticOperations {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
         int A = scan.nextInt();
         int B = scan.nextInt();
 
+        System.out.println(A + B);
         System.out.println(A - B);
-
+        System.out.println(A * B);
+        System.out.println(A / B);
+        System.out.println(A % B);
     }
 }

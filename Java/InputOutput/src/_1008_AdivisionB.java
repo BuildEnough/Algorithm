@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class AdivisionB_1008 {
+public class _1008_AdivisionB {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 

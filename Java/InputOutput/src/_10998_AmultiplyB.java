@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class AmultiplyB_10998 {
+public class _10998_AmultiplyB {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
