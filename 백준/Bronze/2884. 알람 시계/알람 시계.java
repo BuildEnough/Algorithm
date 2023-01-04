@@ -11,8 +11,8 @@ public class Main {
         if (minute < 0) {
             hour -= 1;
             minute += 60;
-            if (hour < 0) {
-                hour = 23;
+        if (hour < 0) {
+            hour = 23;
             }
         }
         System.out.println(hour + " " + minute);
