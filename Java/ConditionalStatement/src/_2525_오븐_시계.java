@@ -6,15 +6,12 @@ public class _2525_오븐_시계 {
         int minute = scan.nextInt();
         int oven = scan.nextInt();
 
-        minute += oven;
+        int min = 60 * hour + minute;
+        min += oven;
 
-        if (minute >= 60) {
-            hour += minute / 60;
-            minute = minute % 60;
-            if (hour >= 24){
-                hour = 0;
-            }
-        }
+        hour = (min / 60) % 24;
+        minute = min % 60;
+
         System.out.println(hour + " " + minute);
     }
 }
