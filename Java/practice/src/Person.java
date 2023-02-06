@@ -9,7 +9,7 @@ public class Person {
         setName(NewName);
     }
 
-    // 생성자 메소드 - 나이만 초기화
+    // 생성자 메소드 - 나이만 초기ㅂ화
     public Person(int NewAge)
     {
         setAge(NewAge);
