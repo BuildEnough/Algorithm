@@ -1,27 +1,23 @@
-import java.util.Scanner;
-public class Main{
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
-        int K = 1;
-        int Q = 1;
-        int L = 2;
-        int B = 2;
-        int N = 2;
-        int P = 8;
+public class Main {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int k=1, q=1, l=2, b=2, n=2, p=8;
 
-        K -= scan.nextInt();
-        Q -= scan.nextInt();
-        L -= scan.nextInt();
-        B -= scan.nextInt();
-        N -= scan.nextInt();
-        P -= scan.nextInt();
+        String str = br.readLine();
+        StringTokenizer st = new StringTokenizer(str, " ");
 
-        System.out.print(K + " ");
-        System.out.print(Q + " ");
-        System.out.print(L + " ");
-        System.out.print(B + " ");
-        System.out.print(N + " ");
-        System.out.print(P + " ");
+        k -= Integer.parseInt(st.nextToken());
+        q -= Integer.parseInt(st.nextToken());
+        l -= Integer.parseInt(st.nextToken());
+        b -= Integer.parseInt(st.nextToken());
+        n -= Integer.parseInt(st.nextToken());
+        p -= Integer.parseInt(st.nextToken());
+
+        System.out.printf("%d %d %d %d %d %d", k, q, l, b, n, p);
     }
 }
