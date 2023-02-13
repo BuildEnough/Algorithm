@@ -1,7 +1,6 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.StringTokenizer;
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -9,9 +8,7 @@ public class Main {
 
         String str = br.readLine();
 
-        StringTokenizer st = new StringTokenizer(str, " ");
-
-        int boolgi = Integer.parseInt(st.nextToken());
+        int boolgi = Integer.parseInt(str);
         int sugi = 543;
 
         System.out.println(boolgi - sugi);
