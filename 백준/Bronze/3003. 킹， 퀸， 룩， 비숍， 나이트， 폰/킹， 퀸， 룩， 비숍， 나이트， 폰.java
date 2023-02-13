@@ -8,8 +8,7 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int k=1, q=1, l=2, b=2, n=2, p=8;
 
-        String str = br.readLine();
-        StringTokenizer st = new StringTokenizer(str, " ");
+        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
 
         k -= Integer.parseInt(st.nextToken());
         q -= Integer.parseInt(st.nextToken());
