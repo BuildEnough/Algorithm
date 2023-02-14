@@ -5,6 +5,11 @@ public class Main {
         int A = scan.nextInt();
         int B = scan.nextInt();
 
-        System.out.println((A > B) ? ">" : ((A < B) ? "<" : "=="));
+        if (A > B)
+            System.out.println(">");
+        else if (A < B)
+            System.out.println("<");
+        else
+            System.out.println("==");
     }
 }
