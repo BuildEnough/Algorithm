@@ -1,44 +1,59 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
 public class Main {
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
 
-        int dice1, dice2, dice3;
-        dice1 = scan.nextInt();
-        dice2 = scan.nextInt();
-        dice3 = scan.nextInt();
+        int a = Integer.parseInt(st.nextToken());
+        int b = Integer.parseInt(st.nextToken());
+        int c = Integer.parseInt(st.nextToken());
 
-        if (dice1 != dice2 && dice2 != dice3 && dice1 != dice3) {
+        // 변수가 모두 다른 경우
+        if (a != b && a != c && b != c) {
             int max;
-            if (dice1 > dice2) {
-                if (dice3 > dice1) {
-                    max = dice3;
+            // a > b
+            if (a > b) {
+                // c > a > b
+                if (c > a) {
+                    max = c;
                 }
+                // a > b, c
                 else {
-                    max = dice1;
+                    max = a;
                 }
             }
+            // b > a
             else {
-                if (dice3 > dice2) {
-                    max = dice3;
+                // c > b > a
+                if (c > b) {
+                    max = c;
                 }
+                // b > a, c
                 else {
-                    max = dice2;
+                    max = b;
                 }
             }
             System.out.println(max * 100);
         }
 
+        // 적어도 한 쌍 이상의 서로 같은 변수 존재
         else {
-            if (dice1 == dice2 && dice1 == dice3) {
-                System.out.println(10000 + dice1 * 1000);
+            // 3개의 변수가 같음
+            if (a == b && a == c) {
+                System.out.println(10000 + a * 1000);
             }
             else {
-                if (dice1 == dice2 || dice1 == dice3) {
-                    System.out.println(1000 + dice1 * 100);
+                // a가 b 혹은 c와 같은 경우
+                if (a == b || a == c) {
+                    System.out.println(1000 + a * 100);
                 }
+                // b가 c랑 다른 경우
                 else {
-                    System.out.println(1000 + dice2 * 100);
+                    System.out.println(1000 + b * 100);
                 }
             }
         }

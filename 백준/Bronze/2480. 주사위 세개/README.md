@@ -4,11 +4,11 @@
 
 ### 성능 요약
 
-메모리: 12844 KB, 시간: 112 ms
+메모리: 11536 KB, 시간: 76 ms
 
 ### 분류
 
-사칙연산(arithmetic), 많은 조건 분기(case_work), 수학(math)
+사칙연산(arithmetic), 많은 조건 분기(case_work), 구현(implementation), 수학(math)
 
 ### 문제 설명
 
