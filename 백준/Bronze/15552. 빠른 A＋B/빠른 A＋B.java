@@ -1,26 +1,20 @@
-// StringBuilder
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.util.StringTokenizer;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
         int T = Integer.parseInt(br.readLine());
 
-        StringTokenizer st;
         StringBuilder sb = new StringBuilder();
 
         for (int i = 0; i < T; i++) {
-            st = new StringTokenizer(br.readLine(), " ");
-            sb.append(Integer.parseInt(st.nextToken()) + Integer.parseInt(st.nextToken())).append("\n");
+            String str = br.readLine();
+            int target = str.indexOf(" ");
+            int result = Integer.parseInt(str.substring(0, target)) + Integer.parseInt(str.substring(target + 1));
+            sb.append(result + "\n");
         }
         br.close();
-
-        System.out.println(sb);
-
+        System.out.print(sb);
     }
 }
