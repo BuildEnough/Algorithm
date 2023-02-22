@@ -8,6 +8,7 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         StringTokenizer st;
+        StringBuilder sb = new StringBuilder();
         while (1>0) {
             st = new StringTokenizer(br.readLine(), " ");
             int A = Integer.parseInt(st.nextToken());
@@ -16,8 +17,9 @@ public class Main {
             if (A==0 && B==0)
                 break;
             else
-                System.out.println(A+B);
+                sb.append(A+B).append('\n');
         }
         br.close();
+        System.out.println(sb);
     }
 }
