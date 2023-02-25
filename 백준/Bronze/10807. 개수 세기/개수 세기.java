@@ -24,5 +24,6 @@ public class Main {
                 count++;
         }
         System.out.println(count);
+        br.close();
     }
 }
