@@ -22,7 +22,7 @@ public class _10810_2 {
                 arr[j] = ball;
             }
         }
-
+        br.close();
         for (int baguni : arr)
             System.out.print(baguni + " ");
     }
