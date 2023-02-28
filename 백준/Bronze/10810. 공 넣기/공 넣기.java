@@ -1,17 +1,21 @@
-import java.util.Arrays;
-import java.util.Scanner;
-public class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
-        int N = sc.nextInt();
+public class Main {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+        int N = Integer.parseInt(st.nextToken());
         int[] arr = new int[N];
 
-        int M = sc.nextInt();
+        int M = Integer.parseInt(st.nextToken());
         for(int i=0; i<M; i++) {
-            int F = sc.nextInt(); // F번 바구니부터
-            int E = sc.nextInt(); // E번 바구니까지
-            int ball = sc.nextInt(); // ball번 공을 넣는다
+            st = new StringTokenizer(br.readLine(), " ");
+            int F = Integer.parseInt(st.nextToken()); // F번 바구니부터
+            int E = Integer.parseInt(st.nextToken()); // E번 바구니까지
+            int ball = Integer.parseInt(st.nextToken()); // ball번 공을 넣는다
 
             for(int j = F-1; j<E; j++)
             {
