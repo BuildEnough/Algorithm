@@ -1,17 +1,26 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.HashSet;
 
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        HashSet<Integer> namugi = new HashSet<Integer>();
 
-        for (int i = 0; i < 10; i++) {
-            namugi.add(Integer.parseInt(br.readLine()) % 42);
+        boolean[] arr = new boolean[42];
+
+        for (int i = 0; i < 10; i++) { // boolean 배열의 default 값은 false
+            arr[Integer.parseInt(br.readLine()) % 42] = true;
         }
         br.close();
-        System.out.println(namugi.size());
+
+        int count = 0;
+        for (boolean bi : arr) {
+            if (bi) { // bi가 true 라면
+                count++;
+            }
+        }
+
+        System.out.println(count);
+
     }
 }
