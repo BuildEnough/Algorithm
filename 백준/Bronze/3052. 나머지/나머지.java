@@ -1,26 +1,17 @@
-import java.util.Arrays;
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.HashSet;
 
 public class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        HashSet<Integer> namugi = new HashSet<Integer>();
 
-        int arr[] = new int[10];
-        int namugi[] = new int[10];
-        int count = 1;
-        
         for (int i = 0; i < 10; i++) {
-            arr[i] = sc.nextInt();
-            namugi[i] = arr[i] % 42;
+            namugi.add(Integer.parseInt(br.readLine()) % 42);
         }
-        sc.close();
-        
-        Arrays.sort(namugi);
-
-        for (int j = 0; j < 10 - 1; j++)
-            if (namugi[j] != namugi[j + 1])
-                count++;
-        
-        System.out.println(count);
+        br.close();
+        System.out.println(namugi.size());
     }
 }
