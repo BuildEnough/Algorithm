@@ -1,10 +1,16 @@
-import java.util.Scanner;
-public class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
-        int N = sc.nextInt();
-        int M = sc.nextInt();
+public class Main {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+
+        int N = Integer.parseInt(st.nextToken());
+        int M = Integer.parseInt(st.nextToken());
 
         int[] arr = new int[N];
         for (int i = 0; i < N; i++) {
@@ -12,8 +18,9 @@ public class Main {
         }
 
         for (int i = 0; i < M; i++) { // M개의 줄
-            int left = sc.nextInt() - 1; // 배열 0부터 시작
-            int right = sc.nextInt() - 1;
+            st = new StringTokenizer(br.readLine(), " ");
+            int left = Integer.parseInt(st.nextToken()) - 1; // 배열 0부터 시작
+            int right = Integer.parseInt(st.nextToken()) - 1; // 배열 0부터 시작
 
             while (left < right) {
                 int temp = arr[left];
@@ -21,7 +28,7 @@ public class Main {
                 arr[right--] = temp;
             }
         }
-        sc.close();
+        br.close();
 
         for (int baguni:arr)
             System.out.print(baguni + " ");
