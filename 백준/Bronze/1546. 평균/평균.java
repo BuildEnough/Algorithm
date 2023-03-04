@@ -11,16 +11,19 @@ public class Main {
         double[] arr = new double[Integer.parseInt(br.readLine())];
 
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = Double.parseDouble(st.nextToken());
-        }
-        Arrays.sort(arr);
 
-        double sum = 0;
+        int max = -1; // -1: 입력받을 값이 0보다 큼
+        double sum = 0.0;
 
         for (int i = 0; i < arr.length; i++) {
-            sum += arr[i]/arr[arr.length-1] * 100;
+            int value = Integer.parseInt(st.nextToken());
+
+            if(value > max) {
+                max = value;
+            }
+            sum += value;
         }
-        System.out.println(sum/ arr.length);
+
+        System.out.println(((sum / max) * 100.0) / arr.length);
     }
 }
