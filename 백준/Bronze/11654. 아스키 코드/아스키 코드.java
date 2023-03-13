@@ -1,10 +1,8 @@
-import java.util.Scanner;
 public class Main {
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
+    public static void main(String[] args) throws Exception {
 
-        int code = scan.next().charAt(0); // 문자열 입력 후 charAt()을 통해 문자로 잘라줌, 문자열 -> 문자
+        int a = System.in.read();
+        System.out.print(a);
 
-        System.out.println(code);
     }
 }
