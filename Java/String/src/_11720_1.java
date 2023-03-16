@@ -16,4 +16,3 @@ public class _11720_1 {
         System.out.print(sum);
     }
 }
-}
