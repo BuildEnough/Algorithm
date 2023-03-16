@@ -1,17 +1,20 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+
 public class Main {
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
+    public static void main(String[] args) throws IOException {
 
-        int N = scan.nextInt(); // 숫자 입력
-        String a = scan.next(); // 숫자 N개 문자열 입력
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        br.readLine();
 
-        int sum = 0; // 숫자 더할 sum 변수 0으로 초기화
+        int sum = 0;
 
-        for(int i = 0; i < N; i++) {
-            sum += a.charAt(i)-'0'; // charAt() 은 해당 문자의 아스키코드 값을 반환
-            // 반드시 -48 또는 -'0' 을 해주어야 우리가 입력받은 숫자 값 그대로를 사용할 수 있음
+        for(byte value : br.readLine().getBytes()) {
+            sum += (value - '0');
         }
+
         System.out.print(sum);
+
     }
 }
